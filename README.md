@@ -1,4 +1,4 @@
-### Network Config
+## Network Config
 Edit network configuration
 ```
 $sudo vim /etc/netplan/00-installer-config.yaml
@@ -32,6 +32,11 @@ Check newtork interface if up and running
 ```
 $ip addr show eth0
 ```
+Manually activate and deactivate the interface
+```
+$sudo ifup eth0   #activate
+$sudo ifdown eth0 #deactivate
+```
 ### Resolved DNS 
 Sometimes you need DNS for temporary network configuration. 
 ```
@@ -49,4 +54,8 @@ sudo route add -net 172.31.0.2/32 gw 172.31.16.1 netmask 255.255.255.255
 This will apply the configuration temporarily allowing to verify if config is correct. If it doesnt work it will rollback.
 ```
 $sudo netplan try
+```
+## Storage Setup
+Logical Volume Manager
+```
 ```
