@@ -40,8 +40,13 @@ Sometimes you need DNS for temporary network configuration.
 nameserver 8.8.8.8 
 nameserver 8.8.4.4
 ```
+### Routing
+```
+sudo route add -net 0.0.0.0 gw 172.31.0.1
+sudo route add -net 172.31.0.2/32 gw 172.31.16.1 netmask 255.255.255.255
+```
 ### Troubleshooting
-This will apply the configuration temporariyly allowing to verify if config is correct. If it doesnt work it will rollback.
+This will apply the configuration temporarily allowing to verify if config is correct. If it doesnt work it will rollback.
 ```
 $sudo netplan try
 ```
