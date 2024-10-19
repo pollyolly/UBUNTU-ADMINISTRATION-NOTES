@@ -55,6 +55,8 @@ This will apply the configuration temporarily allowing to verify if config is co
 ```
 $sudo netplan try
 ```
+### Reference
+[configuring-networks](https://ubuntu.com/server/docs/configuring-networks)
 ## Storage Setup
 Logical Volume Manager
 ```
